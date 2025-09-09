@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    double temp;
+    char scale;
+    printf("Enter temperature (e.g. 100 C or 212 F): ");
+    scanf("%lf %c", &temp, &scale);
+
+    if(scale == 'C' || scale == 'c')
+        printf("Fahrenheit: %.2lf F\n", (temp * 9/5) + 32);
+    else if(scale == 'F' || scale == 'f')
+        printf("Celsius: %.2lf C\n", (temp - 32) * 5/9);
+    else
+        printf("Invalid scale\n");
+    return 0;
+}
